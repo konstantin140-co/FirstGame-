@@ -34,7 +34,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // добавление прыжка
-        if (jump < 2 && Input.GetKeyDown(KeyCode.W))
+        if (jump < 2 && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jump++; //двойной прыжок
